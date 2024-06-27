@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/inventory")
-@CrossOrigin(origins = "https://8081-edbbcdbcdfbeebb313889347baedeafbdefebnine.premiumproject.examly.io")
+@CrossOrigin(origins = "*")
 public class InventoryItemController {
 
     @Autowired
