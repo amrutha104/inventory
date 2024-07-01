@@ -7,6 +7,7 @@ phases:
       - pwd
       - echo Installing NPM dependencies...
       - npm install
+
   build:
     commands:
       - echo Build started on `date`
@@ -14,8 +15,15 @@ phases:
       - cd build
       - pwd
       - ls
+
 artifacts:
   files:
     - '**/*'
   base-directory: reactapp/build
   discard-paths: yes
+
+post_build:
+  commands:
+    - echo Uploading build artifacts to S3 bucket...
+    - aws s3 cp ./reactapp/build s3://inventorycrudapp --recursive --acl public-read
+    - echo Build artifacts uploaded successfully
