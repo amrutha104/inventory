@@ -25,5 +25,5 @@ artifacts:
 post_build:
   commands:
     - echo Uploading build artifacts to S3 bucket...
-    - aws s3 cp ./reactapp/build/ s3://inventorycrudapp --recursive --acl public-read
+    - aws s3 cp ./reactapp/build/ s3://inventorycrudapp/ --recursive --acl public-read
     - echo Build artifacts uploaded successfully
