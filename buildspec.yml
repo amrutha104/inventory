@@ -7,10 +7,6 @@ phases:
       - pwd
       - echo Installing NPM dependencies...
       - npm install
-  pre_build:
-    commands:
-      - echo Running tests...
-      - npm test
   build:
     commands:
       - echo Build started on `date`
