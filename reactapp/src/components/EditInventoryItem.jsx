@@ -43,7 +43,7 @@ const EditInventoryItem = () => {
     }
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api//inventory/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/api/inventory/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
