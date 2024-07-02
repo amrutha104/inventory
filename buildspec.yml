@@ -12,12 +12,11 @@ phases:
     commands:
       - echo Build started on `date`
       - npm run build
-      - cd build
       - pwd
-      - ls
+      - ls reactapp/build
 
 artifacts:
   files:
     - '**/*'
   base-directory: reactapp/build
-  discard-paths: yes
+  discard-paths: no  # Maintains directory structure
