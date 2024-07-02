@@ -11,9 +11,13 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - npm run build
       - pwd
-      - ls reactapp/build
+      - ls
+      - npm run build
+      - echo Build completed
+      - pwd
+      - ls
+      - ls build
 
 artifacts:
   files:
